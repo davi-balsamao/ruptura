@@ -1,0 +1,21 @@
+# Crítico MECE — G2 rodada 2
+
+ALVO: G2 — Recarga em ponto privado (wallbox), rodada 2 (`analises/G2-r2.md`)
+VEREDITO DO GATE: **REPROVADO** (só por evidências novas; números e lógica OK — 26/26 contas, 12/12 tags, 16/18 itens da r1 atendidos. NÃO reabrir o resto na r3.)
+
+## Bloqueantes
+1. [c1] **F23 é ficção usada como caso real.** A página diz "O cenário é fictício" (personagem "Henrique"). Ela sustenta "n=2", "R$ 11 mil" e "desligamento após técnicos apontarem risco de sobrecarga" (vereditos G2.1 e do galho, B2, suposições). Sem F23 sobra F22, que é mais fraca do que a r2 descreve: suspensão **provisória** ("até que a segurança da instalação fosse avaliada"); queixa de **moradores**, não da administração; R$ 9 mil **incluem o carregador** (total). F22 é da mesma seção (CB Radar) que publica cenários fictícios: pode ilustrar, nunca ser a única perna.
+   → (a) Tirar a F23 de toda a análise como evidência (linhas 18, 73–74, 94, 102, 116–117, 173, 186, 194, 219, 295–296, 334, 356 e autochecklist 361, 365); no máximo "ilustração fictícia do jornal", sem peso. (b) n=1 em todos os pontos; Tab. 1: "Caso relatado em condomínio (n=1): R$ 9.000, total com carregador [F22]"; Lacuna 15: "GreenV + 1 relato". (c) Linha 94: "1 relato de suspensão provisória após preocupação de moradores com sobrecarga, pendente de avaliação técnica (F22)". (d) Apoiar "risco de veto por carga do prédio" (Veredito G2.1, Veredito do galho, B2, Alternativa (a), linha 102, CONCLUSÃO) na **F12** (a lei permite veto com "justificativa técnica ou de segurança devidamente fundamentada" e exige "compatibilidade com a carga elétrica da unidade autônoma"); F22 só ilustração (n=1). (e) Linha 173: "risco real… (casos F22/F23)" → "risco previsto na lei (F12)". (f) Corrigir a tabela de CORREÇÕES (linhas 17–18) e a linha 186.
+2. [c1] **A F18 diz quem paga — e se contradiz.** A tabela da F18 (fonte: Elite Síndicos Associados), linha "Custo de instalação", diz para o pay-per-use coletivo: "Absorvido pela empresa operadora". O síndico citado diz que a gratuidade "foi abandonada". A r2 afirma em negrito que a gratuidade "**acabou**" (linha 298), diz que "a fonte não diz explicitamente quem paga" (linhas 15, 299, 354) e cria [suposição: em regra, o condomínio], que a tabela contraria. (O crítico RETIRA a instrução da r1 "recai em regra sobre o condomínio (F18)" — leitura incompleta.)
+   → Linhas 15, 298, 299, 354: "a F18 se contradiz: a tabela (Elite Síndicos) diz que a operadora absorve o custo de instalação no pay-per-use; o síndico citado diz que a gratuidade foi abandonada com o aumento da demanda". Tirar o negrito de "acabou" e atribuir ao síndico. Remover a [suposição: em regra, o condomínio]. Lacuna 13 registra as duas leituras. O desenho "indicar e apoiar, sem financiar" fica (vale nas duas leituras) + 1 frase: se a leitura da tabela estiver certa, a rota (b) sai sem capex para o condomínio, o que a torna mais atraente.
+
+## Correções de 1 linha (entram obrigatoriamente na r3)
+3. [c2] Linha 160: "os 3 anos da GWM cobririam um contrato de 36 m, **nunca** um 2º contrato" está errado (2 × 12 m ou 12 + 24 m cabem em 36 m) e contradiz a frase anterior. → "cobririam um contrato de até 36 m; um 2º contrato só se a soma dos prazos for ≤ 36 m".
+4. [c1] Linha 295: 3.800 ÷ 36 = 105,56 → "**R$ 106–417/mês**" (a Tab. 2 já está certa).
+5. [processo] Refazer autochecklist e tabela de CORREÇÕES após 1 e 2: F23 inválida (ficção); F22 n=1 provisório; F18 contraditória.
+
+## O que NÃO muda
+Todo o resto dos números (cenários A/B/C, Tab. 2–5, faixas 12 m e 24–48 m, R$ 107 mil, 4,6–9,9%); vereditos G2.2 e do galho (exceto a evidência da linha 173); CONCLUSÃO (exceto apoiar "risco de veto" na F12); suposições e fronteiras. Sem invasão de G1/G3. Fontes fracas rotuladas e sem sustentar sozinhas número de veredito; faixa de condomínio declarada indicativa (aceitável).
+
+## NÚMEROS CHECADOS (resumo)
+Dossiê 12/12. F1 (garantia 2 anos), F6, F10, F12, F13, F19 batem. F18: "essa prática foi abandonada" bate; "não diz quem paga" não bate. F22: literal bate, descrição infiel. F23: inválida (ficção). Contas 26/26 (única divergência: 105 → 106). Rastreio: só não batem os pontos dependentes da F23 e a linha 160.

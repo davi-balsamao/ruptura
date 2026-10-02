@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "deck-preview",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8765", "--bind", "127.0.0.1", "--directory", "C:/Users/davil/AppData/Local/Temp/claude/C--Davi-Ruptura/30c36034-ba8f-4d06-a6f3-b143e022b6f7/scratchpad/deck"],
+      "port": 8765
+    }
+  ]
+}
