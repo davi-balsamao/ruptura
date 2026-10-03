@@ -1,47 +1,24 @@
-# Simulador Elétrico (MVP)
+# Simulador Elétrico Web (MVP Dinâmico)
 
-Protótipo do item 1 do MVP (`entrega/CONCLUSOES.md` §4): o lead de elétrico faz a conta **sem CPF e
-sem cadastro**. Visual inspirado no site da Localiza Assinatura (cores, fonte Inter, passos
-numerados); é um protótipo do Case Ruptura 2026, não um site oficial.
+Este é o protótipo do Simulador Elétrico da Localiza Assinatura, desenvolvido inteiramente em **HTML, CSS e JavaScript Vanilla**. O objetivo é oferecer uma experiência de altíssima usabilidade (formato *App-like*), sem depender de infraestrutura de back-end ou instalação de pacotes nesta fase.
 
-**Fora desta versão:** mapa e rota de eletropostos (próxima fase).
+## O que o Simulador faz
+O simulador foca na conversão do cliente através da comparação financeira direta entre um carro Elétrico e um a Combustão Equivalente.
 
-## O que faz
-| Aba | Responde | Base |
-|---|---|---|
-| **Custo total** | Mensalidade + energia do elétrico contra o combustão automático e o de entrada, pela rodagem do lead; empate em km/mês; gráfico de 300 a 3.000 km | G1-r2 |
-| **Minha rotina** | km por semana, quantas vezes ligar na tomada, horas de wallbox, % da bateria por dia, paradas numa viagem e o passo a passo da recarga em casa (casa, condomínio, sem vaga) | G2-r3/r6 |
-| **Resumo para o consultor** | Texto pronto para copiar no WhatsApp ou baixar; nenhum dado pessoal | — |
+1. **Questionário App-like:** O cliente escolhe seu cenário via botões interativos (*Chips*) de Prazo, Recarga e Combustível, e um Slider dinâmico para os KMs rodados por mês. Ao escolher o modelo elétrico, o concorrente a combustão é pré-selecionado automaticamente.
+2. **Custo Efetivo Mensal:** Soma a mensalidade base da assinatura com a estimativa de gasto em energia/combustível da rotina declarada. Mostra o custo real de rodar com os carros.
+3. **Economia Acumulada:** Expande a diferença mensal pelo prazo total do contrato escolhido (ex: 36 meses), gerando impacto financeiro de longo prazo na tomada de decisão.
+4. **Ponto de Equilíbrio (Break-even):** Mostra o momento exato (em km/mês) em que a economia gerada pelo menor custo por km do elétrico consegue empatar e superar o custo inicial mais caro de sua mensalidade.
 
-Os testes (`tests/`) conferem que o simulador reproduz os números validados pelo crítico:
-+R$ 463/mês contra o combustão de entrada a 1.000 km; empate em ~2.330 km/mês; −R$ 446/mês contra o
-automático; wallbox a R$ 104–270/mês para a Localiza.
+## Como rodar
+Por ser **100% estático e *client-side***, o projeto não requer nenhuma instalação, servidor local ou interpretador Python. 
 
-## Rodar
-Usa o ambiente virtual desta pasta (`.venv`, com Streamlit e pytest). O Python global não é alterado.
+Basta abrir o arquivo principal diretamente no seu navegador de preferência:
+**[index.html](file:///c:/Davi/Ruptura/ruptura/entrega/mvp_simulador/index.html)**
 
-```bash
-.venv/Scripts/python.exe rodar.py
-```
+## Estrutura do Projeto
 
-Abre em http://localhost:8501. Testes:
-
-```bash
-.venv/Scripts/python.exe -m pytest -q
-```
-
-Para recriar o ambiente do zero: `python -m venv .venv` e
-`.venv/Scripts/python.exe -m pip install -r requirements.txt`.
-
-## Estrutura
-- `simulador/premissas.py`: todos os números e as fontes. **Troque aqui pela tabela oficial** quando
-  a Localiza liberar o preço (hoje só com CPF); a tela "Ajustar premissas" faz o mesmo sem código.
-- `simulador/custo.py` e `simulador/rotina.py`: cálculo puro, sem dependências.
-- `app.py`: a tela (Streamlit). `rodar.py`: atalho que já aplica o tema de `.streamlit/config.toml`.
-
-## Limitações honestas
-- Mensalidades são **indicativas de mercado** (out/2026) e iguais em todos os prazos e franquias:
-  a tabela por prazo e franquia é lacuna até a cotação oficial.
-- A autonomia para planejar (~222 km) é bateria ÷ consumo PBEV com 20% de reserva (suposição de
-  planejamento). Cada parada de recarga rápida devolve essa autonomia (simplificação).
-- O tempo de wallbox usa 7,4 kW; o carro pode aceitar menos.
+- **`index.html`**: A estrutura de marcação da interface do usuário (UI).
+- **`style.css`**: A folha de estilos contendo o design moderno, paleta institucional (Verde/Lima Localiza) e design responsivo (Mobile-first).
+- **`script.js`**: O motor do simulador. Contém as regras de negócio de variação de preços de franquias e prazos, além do banco de dados interno *mockado* para as simulações Iniciais (Dolphin Mini, GWM Ora 03 e seus pares a combustão).
+- **`DAVI.md`**: O dicionário de dados detalhando a taxonomia, os consumos, as tarifas médias nacionais e as matrizes de contratos. Criado para alinhar exatamente o que a engenharia precisará mapear do banco de dados oficial no futuro.

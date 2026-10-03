@@ -1,0 +1,386 @@
+:root {
+    --verde: #018444;
+    --verde-escuro: #004521;
+    --lima: #78DE1F;
+    --texto: #383838;
+    --texto2: #6B6B6B;
+    --fundo: #F2F2F2;
+    --borda: #E5E5E5;
+    --azul-claro: #E0F2FE;
+    --azul-escuro: #0369A1;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    color: var(--texto);
+    background: #FFFFFF;
+    line-height: 1.5;
+}
+
+.miolo {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.topo {
+    background: var(--fundo);
+}
+
+.topo .miolo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--verde);
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 1;
+}
+
+.marca small {
+    display: block;
+    font-weight: 500;
+    font-size: 12px;
+    color: var(--texto2);
+    margin-top: 3px;
+}
+
+.marca .icone {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    background: var(--verde);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heroi {
+    background: var(--verde-escuro);
+    color: #FFF;
+    padding: 32px 0;
+}
+
+.heroi h1 {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 12px;
+}
+
+.heroi p {
+    font-size: 17px;
+    font-weight: 600;
+    max-width: 620px;
+    color: #E2E8F0;
+}
+
+.container-principal {
+    display: flex;
+    gap: 32px;
+    padding-top: 24px;
+    padding-bottom: 48px;
+}
+
+.col-perfil {
+    flex: 0 0 38%;
+}
+
+.col-resultado {
+    flex: 1;
+}
+
+.card-perfil {
+    background: #FFF;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+    border: 1px solid var(--borda);
+    padding: 24px;
+    position: sticky;
+    top: 24px;
+}
+
+.passo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--texto);
+    margin: 20px 0 10px;
+}
+.passo:first-child {
+    margin-top: 0;
+}
+
+.passo .n {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--lima);
+    color: var(--verde-escuro);
+    font-weight: 700;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.input-form {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid var(--borda);
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--texto);
+    background: #FAFAFA;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.input-form:hover {
+    border-color: #C0C0C0;
+}
+
+/* CHIPS GROUP */
+.chips-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.chips-group.col-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.chip {
+    flex: 1;
+    text-align: center;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid var(--borda);
+    background: #FAFAFA;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--texto2);
+    transition: all 0.2s;
+    user-select: none;
+}
+
+.chip input[type="radio"] {
+    display: none;
+}
+
+.chip:hover {
+    background: #F3F4F6;
+}
+
+.chip.active {
+    border-color: var(--verde);
+    background: #F0FDF4;
+    color: var(--verde-escuro);
+}
+
+.input-range {
+    width: 100%;
+    margin: 8px 0;
+    accent-color: var(--verde);
+}
+
+.slider-info {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--verde);
+    margin-top: 4px;
+}
+
+.dica-km {
+    text-align: center;
+    font-size: 13px;
+    color: var(--texto2);
+    margin-top: 2px;
+}
+
+.manchete {
+    margin-bottom: 24px;
+}
+
+.manchete .tag {
+    display: inline-block;
+    background: var(--fundo);
+    color: var(--texto2);
+    border-radius: 999px;
+    padding: 4px 12px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.manchete h2 {
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--texto);
+    line-height: 1.25;
+    margin: 10px 0 6px;
+}
+
+.manchete p {
+    font-size: 15px;
+    color: var(--texto2);
+}
+
+.cartoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.cartao {
+    background: #FFF;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+    border: 1px solid var(--borda);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.cartao .rot {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--texto2);
+}
+
+.cartao .modelo {
+    font-size: 13px;
+    color: var(--texto2);
+    margin-top: -4px;
+}
+
+.cartao .valor {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--texto);
+    line-height: 1.1;
+}
+
+.cartao .valor span {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.cartao .det {
+    font-size: 13.5px;
+    color: var(--texto2);
+    margin-top: auto;
+}
+
+.cartao.destaque {
+    background: var(--verde-escuro);
+    border-color: var(--verde-escuro);
+}
+
+.cartao.destaque .rot, .cartao.destaque .modelo, .cartao.destaque .det {
+    color: #CFE3D6;
+}
+
+.cartao.destaque .valor {
+    color: #FFF;
+}
+
+/* Economia Acumulada Box */
+.box-economia {
+    background: #EAF9DE;
+    border: 1px solid #C4ECA3;
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.box-economia.negativo {
+    background: #FEE2E2;
+    border-color: #FECACA;
+}
+
+.icone-eco {
+    font-size: 32px;
+}
+
+.texto-eco h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--verde-escuro);
+    margin-bottom: 2px;
+}
+
+.box-economia.negativo .texto-eco h3 {
+    color: #991B1B;
+}
+
+.texto-eco p {
+    font-size: 15px;
+    color: var(--texto);
+    font-weight: 500;
+}
+
+.box-breakeven {
+    background: var(--azul-claro);
+    border: 1px solid #BAE6FD;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--azul-escuro);
+}
+
+.box-breakeven p {
+    font-size: 14.5px;
+    line-height: 1.4;
+}
+
+.rodape {
+    background: var(--fundo);
+    margin-top: 36px;
+}
+
+.rodape .miolo {
+    padding: 18px 1rem;
+    font-size: 12.5px;
+    color: var(--texto2);
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .container-principal {
+        flex-direction: column;
+    }
+    .cartoes {
+        grid-template-columns: 1fr;
+    }
+    .chips-group.col-2 {
+        grid-template-columns: 1fr;
+    }
+}
