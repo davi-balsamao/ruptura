@@ -28,7 +28,7 @@ right=(f'<div style="flex:1;display:flex;flex-direction:column;gap:20px">'
  f'<h3 style="font-family:\'Space Grotesk\', Arial, sans-serif;font-size:32px;font-weight:600;color:{INK}">Como funciona</h3>'
  f'<p style="font-size:26px;line-height:1.35;color:{INK2}"><b>1.</b> Diagnóstico elétrico por instalador parceiro: o teste da Meoo vira produto</p>'
  f'<p style="font-size:26px;line-height:1.35;color:{INK2}"><b>2.</b> Wallbox 7,4 kW em comodato + instalação até R$ 3.000, sem linha extra na fatura</p>'
- f'<p style="font-size:26px;line-height:1.35;color:{INK2}"><b>3.</b> Na saída, a fiação fica e o equipamento volta; se o cliente renova, fica tudo</p></div>'
+ f'<p style="font-size:26px;line-height:1.35;color:{INK2}"><b>3.</b> Quando o cliente sai da assinatura, o wallbox fica com ele, sem retirada</p></div>'
  f'<div style="background:#13212E;border-radius:16px;padding:28px 32px;display:flex;flex-direction:column;gap:10px">'
  f'<h3 style="font-family:\'Space Grotesk\', Arial, sans-serif;font-size:32px;font-weight:600;color:#F6F4EE">Mora em condomínio?</h3>'
  f'<p style="font-size:26px;line-height:1.35;color:#BFCAD3">Kit Localiza: estudo de carga antes de assinar, ART e aviso ao síndico. Em SP, a Lei 18.403/2026 só permite veto com justificativa técnica</p></div>'
@@ -42,8 +42,8 @@ html=f'''<section id="g2" data-transition="fade" style="background:#F6F4EE;color
 {chart}
 {right}
 </div>
-<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:{MUTED}">Fonte: análise G2 validada (Intelbras, Estado de Minas, blog Localiza, Lei SP 18.403/2026). Amortização sem custo de capital; teto = desenho</p>
-<aside>Barreira número 3: instalar o carregador em casa. A proposta: a Localiza inclui o wallbox e a instalação, até um teto de 3 mil reais, nos contratos de 24 a 48 meses. Para a Localiza, isso custa entre 104 e 270 reais por mês por contrato, ou de 3,5% a 9% de uma mensalidade de referência de 3 mil reais. Não entra como linha extra na fatura, porque preço já é a barreira número 4. Em contratos de 12 meses o peso sobe para 14 a 18%, então ali fica opcional com coparticipação. Para quem mora em condomínio, o problema é processo: estudo de carga antes de assinar, ART e aviso ao síndico. Em São Paulo, a lei de 2026 só permite vetar com justificativa técnica. Ressalva honesta: se esse custo cabe na margem a gente não consegue provar sem a margem por contrato, que não é pública.</aside>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:{MUTED}">Fontes: loja.intelbras.com.br (R$ 3.475,80), em.com.br (instalação), al.sp.gov.br (Lei 18.403/2026). Sem custo de capital</p>
+<aside>Barreira número 3: instalar o carregador em casa. A proposta: a Localiza inclui o wallbox e a instalação, até um teto de 3 mil reais, nos contratos de 24 a 48 meses. Para a Localiza, isso custa entre 104 e 270 reais por mês por contrato, ou de 3,5% a 9% de uma mensalidade de referência de 3 mil reais. Não entra como linha extra na fatura, porque preço já é a barreira número 4. Quando o cliente deixa a assinatura, o wallbox fica com ele: no caso-base isso não acrescenta custo à conta de amortização e dispensa a retirada. O custo de retirar a gente cota com os instaladores no primeiro mês; o efeito na renovação só aparece quando os primeiros contratos terminarem. Em contratos de 12 meses o peso sobe para 14 a 18%, então ali fica opcional com coparticipação. Para quem mora em condomínio, o problema é processo: estudo de carga antes de assinar, ART e aviso ao síndico. Em São Paulo, a lei de 2026 só permite vetar com justificativa técnica. Ressalva honesta: se esse custo cabe na margem a gente não consegue provar sem a margem por contrato, que não é pública.</aside>
 </section>'''
-open("project/slides/g2.html","w",encoding="utf-8").write(html)
+open("slides/g2.html","w",encoding="utf-8").write(html)
 print("ok")

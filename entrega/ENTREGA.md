@@ -31,7 +31,8 @@ Arquivo completo: `.claude/case/arvore.md`
   (preço já é barreira #4).
 - Condomínio: estudo de carga antes de assinar + ART + aviso ao síndico. A Lei SP 18.403/2026 só
   admite veto com justificativa técnica.
-- Na devolução, a fiação fica e o equipamento volta (ou fica, se o cliente renova).
+- Fim do contrato (24–48 m): a fiação fica; quem renova segue com o wallbox em comodato e quem deixa a
+  assinatura fica com ele, sem retirada (`G2-r6.md`). Em 12 m: retirada ou compra pelo valor residual.
 - **Não comprovável:** se o custo cabe na margem; se o lead consegue instalar; proteção a
   inquilino; recarga no trabalho.
 

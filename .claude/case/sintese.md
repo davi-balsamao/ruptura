@@ -1,6 +1,19 @@
 # SÍNTESE: Pirâmide SCR e roteiro do pitch (Case 1 Localiza)
 
-> Construída só com conclusões validadas pelo crítico: G1 (r2), G2 (r3), G3 (r2).
+> **Atualização v2 (revisão do time):**
+> - Saiu o foco em "alta rodagem": ≥2.330 km/mês é perfil de motorista de app, já atendido pelo
+>   Zarp (zarp.localiza.com).
+> - O argumento de preço virou "conta à vista, sem CPF, contra o combustão equivalente".
+> - Wallbox (regra de fim de contrato, `analises/G2-r6.md`): em 24–48 m, quem renova segue em
+>   comodato e quem deixa a assinatura fica com o wallbox, sem retirada. No custo gerencial do
+>   caso-base (sem reuso, sem custo de capital) isso não acrescenta custo; a Localiza renuncia ao
+>   reuso (R$ 36–72/mês por contrato de quem sai) ou à venda pelo valor residual, e a um motivo de
+>   renovar. Em 12 m vale a regra da r3. Custo fiscal e jurídico da transferência: lacuna.
+> - "Como provar" virou 2 slides: piloto e cronograma.
+> - Fontes reais em `entrega/CONCLUSOES.md`.
+
+> Construída só com conclusões validadas pelo crítico: G1 (r2), G2 (r3; regra de fim de contrato
+> em `G2-r6.md`), G3 (r2).
 > Tags: `[dado: dados-case1.md#id]` = dossiê · `[G1]`/`[G2]`/`[G3]` = análise validada (arquivo
 > `analises/G1-r2.md`, `G2-r3.md`, `G3-r2.md`, cada número com fonte primária lá) ·
 > `[obs]` = observação direta no site da Localiza (`analises/obs-site-localiza.md`) ·
@@ -13,11 +26,10 @@
 ## MENSAGEM PRINCIPAL (R)
 > **A Localiza converte o lead de elétrico se vender o VE como um pacote "sem atrito de recarga e
 > com a conta à vista": custo total visível antes do CPF, wallbox instalado e incluso, e recarga na
-> rua planejada no app. Começar por um piloto A/B com os leads que já ganham com o elétrico, os de
-> alta rodagem.**
+> rua planejada no app. Provar com um piloto A/B de 90 dias em São Paulo com os leads de elétrico.**
 
 Teste dos 15 segundos: *"O lead quer o elétrico, mas desiste por recarga e preço. Resolvemos a
-recarga dentro da assinatura, mostramos a conta de verdade e começamos por quem já economiza."*
+recarga dentro da assinatura, mostramos a conta de verdade e provamos num piloto em São Paulo."*
 
 **S:**
 - O interesse explodiu: leads em VE foram de 1% para 29% em menos de um ano
@@ -130,7 +142,7 @@ percebe risco → adia ou abandona [dado: #pdf-jornada]). Cada etapa ganha uma r
 
 ## STORYLINE (dot-dash do pitch, ordem de fala)
 1. **Capa + resposta em 15 s:** "Elétrico sem atrito: recarga resolvida, conta à vista, piloto
-   com quem já ganha."
+   A/B em São Paulo."
 2. **Situação:** o interesse explodiu (29% dos leads; 59% preferem assinar; 95% de awareness).
 3. **Complicação:** 80% dos leads de VE que assinam levam combustão. Confiam na Assinatura, não no
    elétrico.

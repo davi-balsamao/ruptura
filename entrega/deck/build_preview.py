@@ -4,12 +4,12 @@ R = os.path.dirname(os.path.abspath(__file__))
 order = sys.argv[1:]
 if not order:
     try:
-        order = json.load(open(os.path.join(R, "project", "deck.json"), encoding="utf-8"))["order"]
+        order = json.load(open(os.path.join(R, "deck.json"), encoding="utf-8"))["order"]
     except Exception:
-        order = [f[:-5] for f in sorted(os.listdir(os.path.join(R, "project", "slides")))]
+        order = [f[:-5] for f in sorted(os.listdir(os.path.join(R, "slides")))]
 parts = []
 for sid in order:
-    p = os.path.join(R, "project", "slides", sid + ".html")
+    p = os.path.join(R, "slides", sid + ".html")
     if os.path.exists(p):
         parts.append(f'<div class="lbl">{sid}</div><div class="wrap">' + open(p, encoding="utf-8").read() + "</div>")
 html = """<!doctype html><html><head><meta charset="utf-8"><title>preview</title>

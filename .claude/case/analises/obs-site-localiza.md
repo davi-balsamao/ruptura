@@ -53,3 +53,10 @@
 - Meoo virou "Localiza Assinatura"; planos de 3, 6 e 9 meses (antes "12 a 48 meses"); "cerca de 70 mil clientes ativos".
 - Pagamento antecipado: "Quanto maior o montante adiantado no início do contrato, menor será o valor das mensalidades". Isso é uma alavanca de preço percebido para a #4, e não está no G1.
 - Não há perfil demográfico de assinantes de elétrico na matéria. **Perfil do assinante de VE = lacuna** (o dossiê só tem o perfil dos ~1.000 respondentes: #idade, #renda, #compra; e 5% da base já tem híbrido/elétrico, #base-58).
+
+## 7. Calculadora pública do site não tem a categoria Elétrico (observado em 02/out/2026)
+- URL: https://assinatura.localiza.com/calculadora-carro-por-assinatura (link "Acessar Calculadora" da home, bloco "Avalie todos os detalhes antes de assinar").
+- Passo 1, trecho literal: "Escolha uma categoria de carro por assinatura:" com as opções "Econômico", "Intermediário", "SUV" e "Utilitário". **Não há "Elétrico"**, embora a home liste "Elétrico" como categoria do catálogo.
+- Passos 2 e 3: prazos "24 meses", "36 meses", "48 meses" e franquias "1.000" a "3.000" km/mês.
+- Implicação para o G1/MVP: o lead de elétrico não tem, hoje, uma conta pública de custo; o Simulador Elétrico preenche essa lacuna e pode reaproveitar o formato desta calculadora.
+- Identidade visual observada (para o protótipo): fundo #F2F2F2, texto #383838, verde #018444, verde-escuro #004521, lima #78DE1F, fonte Inter, cantos de 16 px.

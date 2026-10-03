@@ -1,0 +1,11 @@
+{
+  "name": "pitch-3min",
+  "private": true,
+  "description": "Gera o PowerPoint de 3 minutos do Case Ruptura 2026",
+  "scripts": {
+    "build": "node build_deck.js"
+  },
+  "dependencies": {
+    "pptxgenjs": "^3.12.0"
+  }
+}

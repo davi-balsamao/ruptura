@@ -4,7 +4,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyBboxPatch
 
-OUT = "C:/Davi/Ruptura/entrega/graficos/"
+OUT = "C:/Davi/Ruptura/ruptura/entrega/graficos/"
 BG = "#F6F4EE"; INK = "#13212E"; INK2 = "#3F4A54"; MUTED = "#5E6873"; GRID = "#DDDAD0"
 BLUE = "#2A78D6"; ORANGE = "#D95926"; GRAY = "#B9B6AC"; ORANGE_L = "#F0B08F"
 plt.rcParams.update({"font.family": "DejaVu Sans", "text.color": INK, "axes.labelcolor": INK2,

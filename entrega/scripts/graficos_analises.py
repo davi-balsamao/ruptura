@@ -6,7 +6,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import matplotlib.ticker as mt
 
-OUT = "C:/Davi/Ruptura/entrega/graficos/"
+OUT = "C:/Davi/Ruptura/ruptura/entrega/graficos/"
 BG = "#F6F4EE"; INK = "#13212E"; INK2 = "#3F4A54"; MUTED = "#5E6873"; GRID = "#DDDAD0"
 BLUE = "#2A78D6"; ORANGE = "#D95926"; GRAY = "#9A978D"; BLUE_L = "#86B6EF"
 plt.rcParams.update({"font.family": "DejaVu Sans", "text.color": INK, "axes.labelcolor": INK2,
@@ -47,7 +47,7 @@ ax.yaxis.set_major_formatter(brl); ax.set_ylim(2200, 3800); clean(ax)
 ax.set_title("No uso típico, o elétrico custa R$ 460–640/mês a mais que o" + chr(10) + "combustão de entrada; só empata acima de ~2.330 km/mês",
              loc="left", fontsize=14, fontweight="bold", color=INK, pad=12)
 ax.legend(frameon=False, fontsize=10.5, loc="upper left")
-fonte(fig, "Fonte: G1 r2 (Gráfico 1). INDICATIVO DE MERCADO, não é preço Localiza (que só aparece com CPF): VE R$ 2.870 (canal BYD/Rentcars); ICE Unidas R$ 2.058,99 (36 m). "
+fonte(fig, "Fontes: byd.com/br, livre.com.br, cemig.com.br, precos.petrobras.com.br, vrum.com.br. INDICATIVO DE MERCADO, não é preço Localiza (que só aparece com CPF): VE R$ 2.870 (canal BYD/Rentcars); ICE Unidas R$ 2.058,99 (36 m). "
            "Energia R$ 1,1963/kWh com impostos (MG); DC R$ 2,50/kWh; gasolina R$ 6,55 (ANP). Mensalidade suposta constante entre franquias.")
 fig.tight_layout(rect=(0, 0.08, 1, 1)); fig.savefig(OUT + "05_g1_custo_total_vs_km.png", dpi=200); plt.close(fig)
 
@@ -63,7 +63,7 @@ for a, b, y in [(0, 1, 811.01), (1, 2, 462.51), (2, 3, 462.51), (3, 4, 173.51)]:
 ax.set_xticks(range(5)); ax.set_xticklabels(["Diferença na" + chr(10) + "mensalidade", "Economia de" + chr(10) + "energia", "Diferença" + chr(10) + "real", "Desconto de frota" + chr(10) + "(condicional)", "Ainda em" + chr(10) + "aberto"], fontsize=10.5)
 ax.yaxis.set_major_formatter(brl); ax.set_ylim(0, 950); clean(ax)
 ax.set_title("A mensalidade mostra +R$ 811; o custo real é +R$ 463 (1.000 km/mês)," + chr(10) + "e nenhuma alavanca comprovada fecha a diferença", loc="left", fontsize=14, fontweight="bold", pad=12)
-fonte(fig, "Fonte: G1 r2 (Gráfico 5). Indicativo de mercado (não é preço Localiza). Energia em casa R$ 1,1963/kWh com impostos; gasolina R$ 6,55 (ANP). "
+fonte(fig, "Fontes: byd.com/br, livre.com.br, cemig.com.br, precos.petrobras.com.br. Indicativo de mercado (não é preço Localiza). Energia em casa R$ 1,1963/kWh com impostos; gasolina R$ 6,55 (ANP). "
            "Desconto de frota só se a Localiza obtiver ≥ preço CNPJ e repassar; fechar o resto exigiria −3,5 p.p. de depreciação, sem evidência.")
 fig.tight_layout(rect=(0, 0.08, 1, 1)); fig.savefig(OUT + "06_g1_ponte_percebido_real.png", dpi=200); plt.close(fig)
 
@@ -81,7 +81,7 @@ ax.set_xticks(xs); ax.set_xticklabels(datas)
 ax.yaxis.set_major_formatter(mt.FuncFormatter(lambda v, p: f"{v/1000:.0f} mil"))
 ax.set_ylim(0, 33000); clean(ax); ax.legend(frameon=False, loc="upper left", fontsize=10.5)
 ax.set_title("A rede pública cresceu ~7x em 32 meses,\ne 38% já é recarga rápida", loc="left", fontsize=14, fontweight="bold", pad=12)
-fonte(fig, "Fonte: G3 (Gráfico 1): ABVE/Tupi (fev/25–ago/26), CNN Brasil (2023–2024), Forbes (ago/25). DC sem dado antes de fev/25.")
+fonte(fig, "Fontes: abve.org.br (ABVE/Tupi) (fev/25–ago/26), CNN Brasil (2023–2024), Forbes (ago/25). DC sem dado antes de fev/25.")
 fig.tight_layout(rect=(0, 0.07, 1, 1)); fig.savefig(OUT + "07_g3_pontos_recarga.png", dpi=200); plt.close(fig)
 
 # ---- G3 Gráfico 2: VEs por ponto público ----
@@ -95,7 +95,7 @@ ax.set_yticks(range(len(mk))); ax.set_yticklabels([m for m, _ in mk]); ax.invert
 ax.axvline(10, color=INK2, lw=1, ls=(0, (3, 3))); ax.text(10.3, -0.55, "meta ABVE 10:1", fontsize=10, color=INK2)
 ax.set_xlim(0, 37); ax.set_xticks([]); [ax.spines[s].set_visible(False) for s in ax.spines]
 ax.set_title("Veículos elétricos por ponto público:\no Brasil tem quase o dobro da média global", loc="left", fontsize=14, fontweight="bold", pad=12)
-fonte(fig, "Fonte: G3 (Gráfico 2): ABVE (plug-ins desde 2022 por ponto público/semipúblico, mai/26 e ago/26, mesma base), IEA via EV Infrastructure News (fim 2025). "
+fonte(fig, "Fontes: abve.org.br (plug-ins desde 2022 por ponto público/semipúblico, mai/26 e ago/26, mesma base), evinfrastructurenews.com (IEA) (fim 2025). "
            "Metodologias diferem: comparação de ordem de grandeza.")
 fig.tight_layout(rect=(0, 0.08, 1, 1)); fig.savefig(OUT + "08_g3_ve_por_ponto.png", dpi=200); plt.close(fig)
 print("ok")
